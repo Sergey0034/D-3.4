@@ -1,0 +1,33 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+New
+{% endblock title %}
+
+{% block content %}
+  <table>
+      <tr>
+          <td>
+              <h5>Заголовок</h5>
+          </td>
+          <td>
+              <h5>текст статьи</h5>
+          </td>
+          <td>
+              <h5>Дата публикации</h5>
+          </td>
+      </tr>
+      <tr>
+           <td>
+               {{ new.title }}
+           </td>
+           <td>
+               {{ new.text }}
+           </td>
+           <td>
+               {{ new.date_pub|date:"d.m.Y h:m" }}
+           </td>
+       </tr>
+
+  </table>
+{% endblock content %}
